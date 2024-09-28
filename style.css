@@ -1,0 +1,26 @@
+.but{
+    display: flex;
+    gap: 50px;
+}
+
+.but button{
+    padding: 10px 50px;
+    border: 1px solid black;
+    background: none;
+    transition: 0.5s;
+}
+
+#buc{
+    transition: 0.5s;
+}
+
+.block{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+}
+
+.bb{
+    position: relative;
+}

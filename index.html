@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bac">
+
+    <!-- 1 -->
+    <div class="but">
+        <button id="btn1">Нажатие</button>
+        <button id="btn2">Наведение</button>
+    </div>
+    <script>
+        document.getElementById("btn1").addEventListener("mousedown", function(){
+            btn1.style.background = "red";
+            btn1.style.color = "white";
+        })
+        document.getElementById("btn1").addEventListener("mouseup", function(){
+            btn1.style.background = "white";
+            btn1.style.color = "black"
+        })
+
+        document.getElementById("btn2").addEventListener("mouseover", function(){
+            btn2.style.background = "red";
+            btn2.style.color = "white";
+        })
+        document.getElementById("btn2").addEventListener("mouseout", function(){
+            btn2.style.background = "white";
+            btn2.style.color = "black"
+        })
+    </script>
+
+    <!-- 2 -->
+
+    <script>
+        document.addEventListener("keydown", function(){
+            if(event.code == 'KeyR'){
+                bac.style.background = "red";
+            }
+            else if(event.code == 'KeyG'){
+                bac.style.background = "green";
+            }
+            else if(event.code == 'KeyB'){
+                bac.style.background = "blue";
+            }
+        })
+
+        document.addEventListener("keyup", function(){
+            bac.style.background = "white";
+        })
+    </script>
+
+    <!-- 3 -->
+
+    <div class="bb">
+        <div class="block" id="block"></div>
+    </div>
+
+    <script>
+        let top1 =  0;
+        let left = 0;
+
+        document.addEventListener("keydown", function(){
+            if(event.code == 'KeyS'){
+                top1 += 10;
+            }
+            else if(event.code == 'KeyW'){
+                top1 -= 10;
+            }
+            else if(event.code == 'KeyA'){
+                left -= 10;
+            }
+            else if(event.code == 'KeyD'){
+                left += 10;
+            }
+            block.style.top = top1 + "px";
+            block.style.left = left + "px";
+            
+        })
+        
+    </script>
+</body>
+</html>
